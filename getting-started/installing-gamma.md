@@ -1,32 +1,46 @@
 ---
 description: >-
-  Gamma is a personal Orbs blockchain running locally that allows developers to
-  easily test, run and deploy smart contracts.
+  Gamma is a personal Orbs blockchain running locally that allows developers to easily test, run, and deploy smart contracts.
 ---
 
 # Installing Gamma - local blockchain
 
-## Installing Gamma
+## Prerequisite
 
-Gamma uses [Docker](https://www.docker.com/) to run a personal blockchain with multiple nodes locally. Make sure Docker is available on your machine. See installation instructions [here](https://docs.docker.com/docker-for-mac/install/).
+Gamma uses [Docker](https://www.docker.com/) to run a personal blockchain with multiple nodes locally. Make sure Docker is available on your machine. 
 
-Next, install the Gamma CLI with [brew](https://brew.sh/)
+### On MAC
+See installation instructions [here](https://docs.docker.com/docker-for-mac/install/).
+
+### On Linux
+Install the community edition using the convenience script
+ [here](https://docs.docker.com/install/linux/docker-ce/ubuntu/#install-using-the-convenience-script).
+
+## Installing Gamma Command Line Tool
+
+Next, install the Gamma CLI. `gamma-cli` is the command line tool for developers to interact with a Gamma server instance running on their machine.
+
+### On Mac
+Use [brew](https://brew.sh/)
 
 ```
 brew install orbs-network/devtools/gamma-cli
 ```
+### On Linux
+Run the gamma-cli install script in terminal:
+```bash
+https://raw.githubusercontent.com/orbs-network/gamma-cli/master/gammacli-linux-install-v0.7.0.sh | bash
+```
 
-Verify the installation by running in terminal
-
+### Verify
+Verify the installation by running:
 ```text
 gamma-cli version
 ```
 
-## Gamma CLI
+## Using Gamma CLI
 
-`gamma-cli` is the command line tool for developers to interact with a Gamma server instance running on their machine.
-
-See the various commands supported by the CLI by running in terminal
+You can see the various commands supported by the CLI by running in terminal
 
 ```text
 gamma-cli help
@@ -34,13 +48,13 @@ gamma-cli help
 
 You can use the CLI to start and stop Gamma server, deploy contracts and send transactions.
 
-## Gamma server
+## Installing the Gamma server
 
 Gamma server is an in-memory virtual chain on top of an Orbs blockchain with several nodes on your local machine. The server allows you to test your contracts locally before deploying them to production.
 
-Gamma server will be installed automatically by the CLI.
+If the server isn't installed yet, `gamma-cli` installs it automatically.
 
-Start Gamma server by running in terminal
+So far, we only installed the cli tool. Now, start the Gamma server by running the following command in the terminal. The CLI tool will notice the server is not installed and will install it for you: 
 
 ```text
 gamma-cli start-local
