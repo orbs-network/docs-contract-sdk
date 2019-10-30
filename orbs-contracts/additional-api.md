@@ -36,9 +36,9 @@ It returns the block timestamp representing the Unix epoch in nanoseconds.
 
 ### GetBlockProposerAddress
 
-Used to get the block proposer address, which is the address of the node who wrote the block or is trying to write the block right now.   
-When called during a RunQuery operation, the address the Node that generated this block is 'read' from the block itself, this is the case where data is read from the chain and not written to it, so the block already exists.   
-When called during a SendTransaction operation the Node that is trying to generate the block with the transaction will set its own address as block proposer. 
+Used to get the block proposer address, which is the address of the node who wrote the block or is trying to write the block right now.  
+When called during a RunQuery operation, the address the Node that generated this block is 'read' from the block itself, this is the case where data is read from the chain and not written to it, so the block already exists.  
+When called during a SendTransaction operation the Node that is trying to generate the block with the transaction will set its own address as block proposer.
 
 ```go
 GetBlockProposerAddress() []byte
@@ -114,7 +114,7 @@ Div(x uint64, y uint64) uint64
 
 #### Mod
 
-Performs the modulo operation of `x` by `y`. The input is validated to be valid (meaning `y` is not zero). The resulting number is the reminder.
+Performs the modulo operation of `x` by `y`. The input is validated to be valid \(meaning `y` is not zero\). The resulting number is the reminder.
 
 ```go
 Mod(x *big.Int, y *big.Int) *big.Int
