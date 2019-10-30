@@ -14,7 +14,7 @@ Having that said, the [examples in the Contract SDK](https://github.com/orbs-net
 
 Download the SDK to your computer by running the following in a terminal
 
-```
+```text
 go get -u github.com/orbs-network/orbs-contract-sdk/...
 ```
 

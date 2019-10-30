@@ -1,6 +1,6 @@
 # Calling Ethereum contract
 
-It is possible to perform a cross-chain call and access a contract which is deployed on Ethereum from within a Orbs contract.
+It is possible to perform a cross-chain call and access a contract which is deployed on Ethereum from within an Orbs contract.
 
 The API for this is included in the ethereum library
 
@@ -10,7 +10,7 @@ import (
 )
 ```
 
-The library exposes two different functions described below
+The library exposes several different functions described below
 
 ### GetBlockNumber
 
@@ -19,6 +19,40 @@ This function is used to get the latest 'safe' block number in Ethereum. The 'sa
 ```go
 GetBlockNumber()
 ```
+
+### GetBlockNumberByTime
+
+This function is used to get the block number which was mined just after the timestamp, as long as it is also 'safe'. Safe is defined internally by the SDK as a block which is in the past, around 25 minutes, to avoid forks.
+
+```go
+GetBlockNumberByTime(
+        ethBlockTimestamp uint64)
+```
+
+The argument `GetBlockNumberByTime` takes is:
+
+* `ethBlockTimestamp` - The  Ethereum timestamp in Unix epoch nanoseconds to search for corresponding block.
+
+### GetBlockTime
+
+This function is used to get the block timestamp \(Unix epoch in nanoseconds\) of the latest 'safe' block number in Ethereum. The 'safe' block means a block which is in the past, around 25 minutes, to avoid forks.
+
+```go
+GetBlockTime()
+```
+
+### GetBlockTimeByNumber
+
+This function is used to get the block timestamp \(Unix epoch in nanoseconds\) of the requested block number, as long as it is also 'safe'. Safe is defined internally by the SDK as a block which is in the past, around 25 minutes, to avoid forks.
+
+```go
+GetBlockTimeByNumber(
+        ethBlockNumber uint64)
+```
+
+The argument `GetBlockTimeByNumber` takes is:
+
+* `ethBlockNumber` - The Ethereum block number to get the block's timestamp.
 
 ### CallMethod
 

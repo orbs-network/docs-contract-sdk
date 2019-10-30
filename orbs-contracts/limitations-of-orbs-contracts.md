@@ -4,7 +4,7 @@ Orbs contracts are written in the Go programming language.
 
 To enhance security and enable multiple virtual chains in the Orbs blockchain, the smart contracts are limited compared to the Go language. Specifically, Orbs limits the features and packages of the language that are allowed to execute inside the Orbs Virtual Machine.
 
-### Package Whitelist
+## Package Whitelist
 
 All packages in Go are not allowed except for specific packages listed in the whitelist below:
 
@@ -47,7 +47,7 @@ All packages in Go are not allowed except for specific packages listed in the wh
 
 Trying to include any package **not** in that list results in a failed compilation of the smart contract.
 
-### Time functions blacklist
+## Time functions blacklist
 
 While we enable the use of the time package for time manipulation, it contains several functions which would result in inconsistent and non-deterministic results in contracts, and thus they are blacklisted. These functions are:
 
@@ -64,10 +64,10 @@ While we enable the use of the time package for time manipulation, it contains s
 Using any of these functions results in a failed compilation of the smart contract.
 
 {% hint style="info" %}
-If you want the current time \('Now'\), it is possible to use the contract SDK function `env.GetBlockTimestamp()` 
+If you want the current time \('Now'\), it is possible to use the contract SDK function `env.GetBlockTimestamp()`
 {% endhint %}
 
-### Blacklisted Features
+## Blacklisted Features
 
 Aside from a whitelist of the allowed packages, Orbs does not allow the usage of the following Go language features:
 

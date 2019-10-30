@@ -2,7 +2,7 @@
 
 Developing a contract should be done via a Golang IDE, just any other project using Go.
 
-### Development
+## Development
 
 After starting a new project/workspace, depending on the IDE, the development should start by creating the contract file, which contains the main package.
 
@@ -31,7 +31,7 @@ func _init() {
 
 Next, add your functions and export them as needed.
 
-### Testing
+## Testing
 
 Testing your contract is done by utilizing the gamma-cli, which is an emulation of the full blockchain. As part of the contract sdk we expose the following import:
 
@@ -43,7 +43,7 @@ import (
 
 It wraps the gamma-cli and enables the testing code to deploy and run functions on gamma, emulating the Orbs blockchain and ensuring your contract is behaving as expected.
 
-We recommend creating a `test` folder under the location of your contract go file and add tests there. 
+We recommend creating a `test` folder under the location of your contract go file and add tests there.
 
 The example below uses a standard ERC20 contract to run some tests, the folder structure is as such:
 
@@ -117,6 +117,4 @@ Next, a query is executed to assert that the balance of `user1` is as expected. 
 ```
 
 Which means that the method `balanceOf` in contract `OrbsERC20` is executed with the argument specified, which is the key for user1 \(the user which was used to sign the deploy transaction\)
-
-
 

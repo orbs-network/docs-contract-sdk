@@ -56,5 +56,3 @@ events.EmitEvent(BabyBorn, name, uint32(3))
 
 The arguments are a pointer to the event function \(which is also exported\) and the event arguments.
 
-
-

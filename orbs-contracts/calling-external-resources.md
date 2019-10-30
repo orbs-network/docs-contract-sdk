@@ -23,3 +23,4 @@ This function received the following arguments:
 * `args` - The variadic parameter for the method arguments 
 
 The return value contains the array of the result of the function execution.
+

@@ -1,7 +1,7 @@
 ---
 description: >-
-  This tutorial will take you through the entire process of writing a contract and deploying
-  it on a local instance of ORBS in just a few minutes.
+  This tutorial will take you through the entire process of writing a contract
+  and deploying it on a local instance of ORBS in just a few minutes.
 ---
 
 # Deploying your first contract
@@ -16,8 +16,8 @@ Let's write a simple example that implements a counter. Create a file named `cou
 package main
 
 import (
-	"github.com/orbs-network/orbs-contract-sdk/go/sdk/v1"
-	"github.com/orbs-network/orbs-contract-sdk/go/sdk/v1/state"
+    "github.com/orbs-network/orbs-contract-sdk/go/sdk/v1"
+    "github.com/orbs-network/orbs-contract-sdk/go/sdk/v1/state"
 )
 
 var PUBLIC = sdk.Export(add, get)
@@ -26,17 +26,17 @@ var SYSTEM = sdk.Export(_init)
 var COUNTER_KEY = []byte("count")
 
 func _init() {
-	state.WriteUint64(COUNTER_KEY, 0)
+    state.WriteUint64(COUNTER_KEY, 0)
 }
 
 func add(amount uint64) {
-	count := state.ReadUint64(COUNTER_KEY)
-	count += amount
-	state.WriteUint64(COUNTER_KEY, count)
+    count := state.ReadUint64(COUNTER_KEY)
+    count += amount
+    state.WriteUint64(COUNTER_KEY, count)
 }
 
 func get() uint64 {
-	return state.ReadUint64(COUNTER_KEY)
+    return state.ReadUint64(COUNTER_KEY)
 }
 ```
 {% endcode-tabs-item %}
@@ -52,8 +52,7 @@ We'll test our contract on Gamma server. Start it from terminal
 gamma-cli start-local
 ```
 
-You can keep an eye on Prism (http://localhost:3000/) to see new blocks and transactions apear 
-as you continue with the deployment in the next steps.  
+You can keep an eye on Prism \([http://localhost:3000/](http://localhost:3000/)\) to see new blocks and transactions apear as you continue with the deployment in the next steps.
 
 ## 3. Deploy the contract
 

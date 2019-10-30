@@ -28,7 +28,7 @@ gamma-cli start-local -port 8089
 
 ## Running Prism
 
-Prism is the Orbs block explorer, you can access the actual one at: [https://prism.orbs.network](https://prism.orbs.network)
+Prism is the Orbs block explorer, you can access the one pointing to the mainnet at: [https://prism.orbs.network](https://prism.orbs.network)
 
 When running gamma and starting the server, it will also automatically run prism which will be accessible locally by browsing to http://localhost:3000
 
@@ -53,8 +53,8 @@ gamma-cli start-local -no-ui
 ## In-memory instance
 
 {% hint style="warning" %}
-It's important to understand that Gamma server is only running in-memory. 
+It's important to understand that Gamma server is not storing any persistant state and uses only in-memory storage.
 {% endhint %}
 
-Every time you restart Gamma server, all contracts and state disappear from memory. You will need to deploy the contracts again when the server is started.
+Every time you restart a Gamma server, all contracts and state disappear from memory. You will need to deploy the contracts again when the server is started.
 

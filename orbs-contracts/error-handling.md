@@ -29,5 +29,3 @@ Will output the following result on execution:
 }
 ```
 
-
-
