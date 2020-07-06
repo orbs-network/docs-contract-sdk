@@ -34,18 +34,6 @@ GetBlockTimestamp() uint64
 
 It returns the block timestamp representing the Unix epoch in nanoseconds.
 
-### GetBlockProposerAddress
-
-Used to get the block proposer address, which is the address of the node who wrote the block or is trying to write the block right now.  
-When called during a RunQuery operation, the address the Node that generated this block is 'read' from the block itself, this is the case where data is read from the chain and not written to it, so the block already exists.  
-When called during a SendTransaction operation the Node that is trying to generate the block with the transaction will set its own address as block proposer.
-
-```go
-GetBlockProposerAddress() []byte
-```
-
-It will return the block proposer address as a byte array
-
 ### GetVirtualChainId
 
 Used to get the virtual chain id this contract is executing on.
