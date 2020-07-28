@@ -34,6 +34,10 @@ state.WriteBytes(key, value)
 state.WriteString(key, value)
 state.WriteUint32(key, value)
 state.WriteUint64(key, value)
+state.WriteBool(key, value)
+state.WriteUint256(key, value)
+state.WriteBytes20(key, value)
+state.WriteBytes32(key, value)
 ```
 
 Each function will accept value with the given type and store it to the state at the given key
@@ -49,11 +53,15 @@ state.ReadBytes(key)
 state.ReadString(key)
 state.ReadUint32(key)
 state.ReadUint64(key)
+state.ReadBool(key)
+state.ReadUint256(key)
+state.ReadBytes20(key)
+state.ReadBytes32(key)
 ```
 
 Each function will accept the key of the value you need to read, and return the typed value from the contract state.
 
-Reading a value that was never set will return the zero value of its type.
+Reading a value that was never set will return the zero value of its type. Reading with a function of a different type than what was written is highly discouraged, and may fail \(especially for fixed size ones like bool, \[20\]byte and \[32\]byte\).
 
 ### Removing data
 

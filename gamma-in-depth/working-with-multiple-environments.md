@@ -12,8 +12,7 @@ To make this process easier, Gamma CLI supports multiple environments with an op
 
 To configure multiple environments create a file named `orbs-gamma-config.json` in the local directory, with the following format
 
-{% code-tabs %}
-{% code-tabs-item title="orbs-gamma-config.json" %}
+{% code title="orbs-gamma-config.json" %}
 ```javascript
 {
   "Environments": {
@@ -32,8 +31,7 @@ To configure multiple environments create a file named `orbs-gamma-config.json` 
   }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 {% hint style="info" %}
 If a config file does not exist, the default environment is `"local"` with virtual chain `42` and the endpoint `"localhost"`

@@ -10,8 +10,7 @@ description: >-
 
 Let's write a simple example that implements a counter. Create a file named `counter.go` and type in the following content
 
-{% code-tabs %}
-{% code-tabs-item title="counter.go" %}
+{% code title="counter.go" %}
 ```go
 package main
 
@@ -39,8 +38,7 @@ func get() uint64 {
     return state.ReadUint64(COUNTER_KEY)
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 Don't worry if you don't fully understand the code at this point.
 
@@ -80,8 +78,7 @@ If the deploy is successful, you'll see a response similar to this
 
 Write the transaction details in a JSON file named `add-25.json`
 
-{% code-tabs %}
-{% code-tabs-item title="add-25.json" %}
+{% code title="add-25.json" %}
 ```javascript
 {
   "ContractName": "MyCounter",
@@ -94,8 +91,7 @@ Write the transaction details in a JSON file named `add-25.json`
   ]
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 > More Information about sending transactions and the Gamma-cli json files structures can be found at the [gamma in depth chapter](../gamma-in-depth/sending-transactions-and-queries.md) of this documentation
 
@@ -113,8 +109,7 @@ Note that the transaction will be signed by `user1`, an example account found in
 
 Write the query details in a JSON file named `get.json`
 
-{% code-tabs %}
-{% code-tabs-item title="get.json" %}
+{% code title="get.json" %}
 ```javascript
 {
   "ContractName": "MyCounter",
@@ -122,8 +117,7 @@ Write the query details in a JSON file named `get.json`
   "Arguments": []
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 This query will read the counter value from the contract's state. Send it from terminal
 

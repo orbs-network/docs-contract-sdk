@@ -91,7 +91,63 @@ The array of arguments should be given according to the declaration of the metho
 ```javascript
   {
     "Type": "bytes",
-    "Value": "00ff018e00ab2fe901"
+    "Value": "0x00ff018e00ab2fe901"
+  }
+```
+
+* `bool` - boolean value. Matches the `bool` type in Go contracts. Provided in the JSON as a string with value `"0"` or `"1"`. For example
+
+```javascript
+  {
+    "Type": "bool",
+    "Value": "1"
+  }
+```
+
+* `uint256` - Integer with 256 bit precision. Matches the `*big.Int` type in Go contracts. Provided in the JSON as a hex string with fixed size of 64 hexes. For example
+
+```javascript
+  {
+    "Type": "uint256",
+    "Value": "0x00112233445566778899aabbccddeeff00112233445566778899aabbccddeeff"
+  }
+```
+
+* `bytes20` - A fixed size array of 20 bytes. Matches the `[20]byte` type in Go contracts. Provided in the JSON as a hex string with fixed size of 40 hexes. For example
+
+```javascript
+  {
+    "Type": "bytes20",
+    "Value": "0x0011223344556677889900112233445566778899"
+  }
+```
+
+* `bytes32` - A fixed size array of 32 bytes. Matches the `[32]byte` type in Go contracts. Provided in the JSON as a hex string with fixed size of 64 hexes. For example
+
+```javascript
+  {
+    "Type": "bytes32",
+    "Value": "0x00112233445566778899aabbccddeeff00112233445566778899aabbccddeeff"
+  }
+```
+
+All the slice of these types are also supported. The type has the suffix 'Array' and the value is JSON Array of strings representing the values. For example
+
+```javascript
+  {
+    "Type": "uint64Array",
+    "Value": [
+      "10029999",
+      "1997",
+      "12345678"
+    ]
+  },
+  {
+    "Type": "bytes20Array",
+    "Value": [
+      "0x0011223344556677889900112233445566778899",
+      "0x0000000000000000000000111111111111111111"
+    ]
   }
 ```
 
@@ -110,8 +166,7 @@ In addition to these primitives, Gamma CLI supports several aliases for convenie
 
 Consider a JSON for a typical **transfer** method
 
-{% code-tabs %}
-{% code-tabs-item title="transfer-15.json" %}
+{% code title="transfer-15.json" %}
 ```javascript
 {
   "ContractName": "MyToken",
@@ -129,8 +184,7 @@ Consider a JSON for a typical **transfer** method
   ]
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 The first argument is the **amount** and the second argument is the **recipient address**.
 
@@ -155,4 +209,8 @@ gamma-cli send-tx transfer-15.json -arg2 7ccd7f7c18c0cb749dd8b8949f4b4e31f718839
 ```
 
            will send **15** tokens to recipient **7ccd7f7c18c0cb749dd8b8949f4b4e31f7188394**
+
+When the type is an Array \(slice\) should be a STRINGIFIED JSON representation for example if the type is a boolArray the override value can be something like this :
+
+"\[\"0\", \"1\", \"1\"\] - this is a string representation of `[]bool{false, true, true}`
 

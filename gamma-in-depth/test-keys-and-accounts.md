@@ -34,8 +34,7 @@ This will override `orbs-test-keys.json` with new data.
 
 The JSON format of `orbs-test-keys.json` is straightforward
 
-{% code-tabs %}
-{% code-tabs-item title="orbs-test-keys.json" %}
+{% code title="orbs-test-keys.json" %}
 ```javascript
   "user1": {
     "PrivateKey": "0x8fc915f55aD5c6EFA5dC9a20F14a1Ec365afa23Ed1E5eB42a7512e2977C6693D77b5D6bFDbFb44A441330d1EDcD7d654240fb6B1b5FfeDAB94695fc70576eCE1",
@@ -53,8 +52,7 @@ The JSON format of `orbs-test-keys.json` is straightforward
     "Address": "0x28E445b353BC8376FD13291583Ec55e3e6140Ec5"
   }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 Feel free to edit the file manually and add your own accounts. "Real-life" accounts are usually created using the [Orbs Client SDK](https://github.com/orbs-network/orbs-client-sdk-go).
 

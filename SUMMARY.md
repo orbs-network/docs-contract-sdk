@@ -15,7 +15,7 @@
 
 * [Smart contracts](orbs-contracts/smart-contracts.md)
 * [Layout of a contract file](orbs-contracts/layout-of-a-contract-file.md)
-* [Data types](orbs-contracts/data-types.md)
+* [Data types \(Exported Functions\)](orbs-contracts/data-types.md)
 * [State](orbs-contracts/contract-state.md)
 * [Address](orbs-contracts/signer-and-addresses.md)
 * [Events](orbs-contracts/events.md)

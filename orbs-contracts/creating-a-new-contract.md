@@ -59,8 +59,7 @@ In that folder structure, `erc20.go` is the contract implementation, `token_init
 
 Observing the testing code, `token_init_test.go` we can see the following:
 
-{% code-tabs %}
-{% code-tabs-item title="token\_init\_test.go" %}
+{% code title="token\_init\_test.go" %}
 ```go
 package test
 
@@ -89,8 +88,7 @@ func TestTokenInit(t *testing.T) {
     }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 We can see that it uses the `gamma` package, which is the wrapping of gamma-cli inside go code. Using `Start()` tells it to run gamma and wait for it to start, which can take several seconds to complete.
 

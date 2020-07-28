@@ -12,8 +12,7 @@ Similar to other Smart Contract frameworks, an Orbs contract is comprised of the
 
 Here is an example of a straightforward contract that implements a counter. It has two main functions, `get` and `add`, and it stores a single state value called `counter`.
 
-{% code-tabs %}
-{% code-tabs-item title="counter.go" %}
+{% code title="counter.go" %}
 ```go
 package main
 
@@ -41,8 +40,7 @@ func get() uint64 {
     return state.ReadUint64(COUNTER_KEY)
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ## Storage and State
 
