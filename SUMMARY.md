@@ -37,4 +37,8 @@
 * [Working with multiple environments](gamma-in-depth/working-with-multiple-environments.md)
 * [Upgrading to latest versions](gamma-in-depth/upgrading-to-latest-versions.md)
 * [Gamma server under the hood](gamma-in-depth/gamma-server-under-the-hood.md)
+* [Deploying Gamma in the Cloud](gamma-in-depth/deploying-gamma-in-the-cloud/README.md)
+  * [Amazon Web Services](gamma-in-depth/deploying-gamma-in-the-cloud/amazon-web-services.md)
+  * [Google Cloud Platform](gamma-in-depth/deploying-gamma-in-the-cloud/google-cloud-platform.md)
+  * [Azure](gamma-in-depth/deploying-gamma-in-the-cloud/azure.md)
 
