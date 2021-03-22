@@ -10,5 +10,7 @@ For testing and staging on a publicly available server, you may easily deploy a 
 
 {% page-ref page="google-cloud-platform.md" %}
 
+{% page-ref page="azure.md" %}
+
 
 
